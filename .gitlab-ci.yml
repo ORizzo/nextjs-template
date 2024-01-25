@@ -1,0 +1,13 @@
+image: node:latest
+
+variables:
+  VARIABLE: value
+
+deploy:
+  stage: deploy
+  script:
+    - yarn
+    - yarn build
+  environment: production
+  only:
+    - main
